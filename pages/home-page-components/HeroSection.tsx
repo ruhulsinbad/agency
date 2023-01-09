@@ -50,7 +50,7 @@ const HeroSection = () => {
 
           {/* Part Two  */}
 
-          <div className=" my-12 flex items-center min-h-[50%] w-full ">
+          <div className=" hidden lg:my-12 lg:flex items-center min-h-[50%] w-full ">
             <Image
               src="https://d1bltcifwhkdae.cloudfront.net/uploads/Group-1632.png"
               alt="Hero Section Image"
