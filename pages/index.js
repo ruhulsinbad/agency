@@ -1,14 +1,18 @@
 import Head from "next/head";
-import { gql } from "@apollo/client";
-import client from "./apollo-client";
+// import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
 import HeroSection from "./home-page-components/HeroSection";
 import AfterHeroSection from "./home-page-components/AfterHeroSection";
 
-const HelloQuery = gql`
-  query {
-    hello
-  }
-`;
+// export const client = new ApolloClient({
+//   uri: "http://localhost:3000/api/graphql",
+//   cache: new InMemoryCache(),
+// });
+
+// const HelloQuery = gql`
+//   query {
+//     hello
+//   }
+// `;
 
 export default function Home() {
   return (
@@ -29,14 +33,14 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps() {
-  const { data } = await client.query({
-    query: HelloQuery,
-  });
+// export async function getStaticProps() {
+//   const { data } = await client.query({
+//     query: HelloQuery,
+//   });
 
-  return {
-    props: {
-      data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
